@@ -1,6 +1,9 @@
 package org.example.lesson_1
 
 fun main() {
-    var allOrders = 75
-    var acceptOrderText = "Спасибо за покупку"
+    val allOrders : Int = 75
+    val acceptOrderText : String = "Спасибо за покупку!"
+
+    println(allOrders)
+    println(acceptOrderText)
 }
