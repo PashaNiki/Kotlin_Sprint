@@ -1,6 +1,7 @@
 package org.example
 
 fun main() {
+
     val secondsInSpace = 6480
 
     val hours = secondsInSpace / 3600
