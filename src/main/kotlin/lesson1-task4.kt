@@ -7,9 +7,7 @@ fun main() {
     val apogee: Int = 327000
 
     println(length)
-    println(age)
     println(partOfDay)
-    println(seconds)
     println(partOfYear)
     println(apogee)
 }
