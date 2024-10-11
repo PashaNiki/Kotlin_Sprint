@@ -1,6 +1,6 @@
 package org.example
 
-const val PERCENTAGE_BUFF_DIVIDER = 100
+    const val PERCENTAGE_BUFF_DIVIDER = 100
 
 fun main() {
 
