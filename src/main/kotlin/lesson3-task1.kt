@@ -5,7 +5,7 @@ fun main()  {
     val userName = "Александр"
     var greeting: String
 
-    greeting = "Добрый день, $userName"
+    greeting = "Добрый день, $userName!"
     println(greeting)
 
     greeting = "Добрый вечер, $userName!"
