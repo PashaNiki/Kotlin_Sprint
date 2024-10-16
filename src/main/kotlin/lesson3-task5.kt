@@ -4,13 +4,10 @@ fun main(){
 
     val moveD = "D2-D4;0"
 
-    val parts = moveD.split(";")
-    val movePart = parts[0]
-    val moveNumber = parts[1]
-
-    val moveDetail = movePart.split("-")
-    val from = moveDetail[0]
-    val to = moveDetail[1]
+    val parts = moveD.split(";","-")
+    val from = parts[0]
+    val to = parts[1]
+    val moveNumber = parts[2]
 
     println("Откуда: $from")
     println("Куда: $to")
