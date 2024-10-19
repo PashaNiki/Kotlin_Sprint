@@ -3,7 +3,6 @@ package org.example
 const val REQUIRED_HUMIDITY = 20
 const val SEASON = "зима"
 
-
 fun main() {
 
     val isSunny = true
