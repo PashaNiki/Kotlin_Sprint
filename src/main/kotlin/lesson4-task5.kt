@@ -8,16 +8,16 @@ package org.example
 fun main() {
 
     println("Корабль имеет повреждения? (true/false)")
-    val hasDamage = readLine()!!.toBoolean()
+    val hasDamage = readln().toBoolean()
 
     println("Введите текущее количество экпипажа:")
-    val teamCount = readLine()!!.toInt()
+    val teamCount = readln().toIntOrNull() ?: 0
 
     println("Введите количество ящиков с провизией:")
-    val provisionBox = readLine()!!.toInt()
+    val provisionBox = readln().toIntOrNull() ?: 0
 
     println("Погода благоприятная? (true/false)")
-    val goodWeather = readLine()!!.toBoolean()
+    val goodWeather = readln().toBoolean()
 
     val canSail = (!hasDamage && teamCount in MIN_TEAM..MAX_TEAM && provisionBox > MIN_PROVISION_BOX) ||
                 (hasDamage && teamCount == MAX_TEAM && goodWeather && provisionBox >= MIN_PROVISION_BOX)
