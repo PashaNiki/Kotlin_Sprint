@@ -30,12 +30,12 @@ fun main() {
     var authorized = false
 
     while (attempts > 0 && !authorized) {
-        val number1 = Random.nextInt(1,10)
-        val number2 = Random.nextInt(1,10)
+        val number1 = (1..10).random()
+        val number2 = (1..10).random()
         val correctAnswer = number1 + number2
 
         println("Для входа в систему, решите пример: $number1 + $number2")
-        val userAnswer = readln().toIntOrNull()
+        val userAnswer = readln().toIntOrNull() ?: -1
 
         if(userAnswer == correctAnswer) {
             println("Добро пожаловать")
