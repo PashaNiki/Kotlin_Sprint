@@ -8,7 +8,7 @@ fun main() {
     var userCode: Int
 
     while (true) {
-        authCode = Random.nextInt(1000, 10000)
+        authCode = (1000..10000).random()
 
         println("Ваш код авторизации N: $authCode")
 
