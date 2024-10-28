@@ -4,7 +4,7 @@ import kotlin.random.Random
 
 fun main() {
 
-    val Number = Random.nextInt(1,10)
+    val Number = (1..10).random()
     var attempts = 5
 
     println("Угадайте число от 1 до 9. У вас есть $attempts попыток")
