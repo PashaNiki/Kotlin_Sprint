@@ -1,16 +1,16 @@
 package org.example
 
-import kotlin.random.Random
-
 fun main() {
+
+    val Count = 3
 
     val password = StringBuilder()
 
-    for (i in 1..3) {
-        val word = Random.nextInt('a'.code,'z'.code + 1).toChar()
+    for (i in 1..Count) {
+        val word = ('a'..'z').random()
         password.append(word)
 
-        val digit = Random.nextInt(0,10)
+        val digit =(0..9).random()
         password.append(digit)
     }
     println("Пароль: $password")
