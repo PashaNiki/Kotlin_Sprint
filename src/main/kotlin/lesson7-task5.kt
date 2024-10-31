@@ -4,7 +4,7 @@ const val MIN_PASSWORD_LENGTH = 6
 
 fun main() {
 
-    println("Введите длину пароля (миниум 6 символов):")
+    println("Введите длину пароля (миниум $MIN_PASSWORD_LENGTH символов):")
     val passwordLength = readln().toIntOrNull() ?: MIN_PASSWORD_LENGTH
 
     if (passwordLength < MIN_PASSWORD_LENGTH) {
