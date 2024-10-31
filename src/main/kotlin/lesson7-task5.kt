@@ -26,6 +26,7 @@ fun main() {
     for (i in 1..remainingChars) {
         passwordChar.add(allChars.random())
     }
+
     passwordChar.shuffle()
 
     val password = passwordChar.joinToString("")
