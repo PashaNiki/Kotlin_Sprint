@@ -3,14 +3,10 @@ package org.example
 fun main() {
 
     println("Сколько ингредиентов добавить?")
-    val ingredientsAll = readln().toInt()
-
-    val ingredients = Array(ingredientsAll) {""}
-
-    for (i in ingredients.indices) {
-        println("Введите ингредиент ${i + 1}:")
-        ingredients[i] = readln()
+    val ingredients = Array(readln().toInt()) {
+        println("Ввелите ингредиент ${it + 1}:")
+        readln()
     }
-    println("Вы ввели следующие игредиенты:")
-    println(ingredients.joinToString (", "  ))
+    println("Вы ввели следующие ингредиенты:")
+    println(ingredients.joinToString (", "))
 }
