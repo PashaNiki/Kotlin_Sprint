@@ -7,7 +7,7 @@ fun main() {
     println("Введите ингридиент для поиска:")
     val userIngredient = readln()
 
-        if (ingredients.any{ it.equals(userIngredient, ignoreCase = true) }) {
+        if (userIngredient.lowercase() in ingredients.map { it.lowercase() } ) {
             println("Ингридиент \"$userIngredient\" в рецепте есть")
         } else {
             println("Такого ингридиента в рецепте нет")
