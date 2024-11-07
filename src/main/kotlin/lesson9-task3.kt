@@ -3,16 +3,22 @@ package org.example
 fun main() {
 
     val ingredientsPortion = listOf(2, 50, 15)
+    val ingredientsNames = listOf("Яиц", "Молока", "Сливочного масла")
 
     println("Введите количество порций:")
-    val portions = readln().toInt()
+    val input = readlnOrNull()
 
-    val totalEggs = ingredientsPortion[0] * portions
-    val totalMilk = ingredientsPortion[1] * portions
-    val totalButter = ingredientsPortion[2] * portions
+    val portions = input?.toIntOrNull()
+    if (portions == null || portions <= 0) {
+        println("Пожалуйста, введите корректное положительное число.")
+        return
+    }
+
+    val totalIngredients = ingredientsPortion.map { it * portions }
 
     println("На $portions порций вам нужно:")
-    println("Яиц - $totalEggs шт.")
-    println("Молока - $totalMilk мл.")
-    println("Сливочного масла - $totalButter гр.")
+    ingredientsNames.forEachIndexed { index, name ->
+        val unit = if (index == 0) "шт." else if (index == 1) "мл." else "гр."
+        println("$name - ${totalIngredients[index]} $unit")
+    }
 }
