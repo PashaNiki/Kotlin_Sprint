@@ -17,4 +17,5 @@ fun main() {
     }
     println("Ингредиенты в алфавитном порядке:")
     println(formattedIngredients.joinToString (", "))
+
 }
