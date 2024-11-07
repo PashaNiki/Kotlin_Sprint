@@ -20,5 +20,6 @@ fun main() {
     ingredientsNames.forEachIndexed { index, name ->
         val unit = if (index == 0) "шт." else if (index == 1) "мл." else "гр."
         println("$name - ${totalIngredients[index]} $unit")
+
     }
 }
