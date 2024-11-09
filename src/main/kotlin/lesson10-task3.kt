@@ -26,5 +26,4 @@ fun main() {
 
     val password = generatePass(lenght)
     println("Сгенерированный пароль: $password")
-
 }
