@@ -2,8 +2,8 @@ package org.example
 
 fun generatePass(lenght: Int): String {
 
-    val digits = "0123456789"
-    val specialChars = "!\"#\$%&'()*+,-./ "
+    val digits = '0'..'9'
+    val specialChars = '!'..'/'
 
     val password = StringBuilder()
 
