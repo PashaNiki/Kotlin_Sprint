@@ -1,7 +1,9 @@
 package org.example
 
+const val LENGHT = 4
+
 fun isValidLength(input: String): Boolean {
-    return input.length >= 4
+    return input.length >= LENGHT
 }
 
 fun main() {
