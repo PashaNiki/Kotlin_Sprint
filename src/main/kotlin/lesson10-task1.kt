@@ -3,7 +3,7 @@ package org.example
 import kotlin.random.Random
 
 fun rollDice(): Int {
-    return Random.nextInt(1,7)
+    return (1..6).random()
 }
 
 fun main() {
