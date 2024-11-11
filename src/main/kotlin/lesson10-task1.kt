@@ -1,7 +1,5 @@
 package org.example
 
-import kotlin.random.Random
-
 fun rollDice(): Int {
     return (1..6).random()
 }
