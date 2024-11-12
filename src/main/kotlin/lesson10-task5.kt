@@ -3,14 +3,18 @@ package org.example
 const val VALID_USER_LOGIN = "asd123"
 const val VALID_USER_PASSWORD = "qwerty123"
 
+val numbers = '0'..'9'
+val symbolsLower = 'a'..'z'
+val symbolUpper = 'A'..'Z'
+
 fun generateToken(): String {
 
     val token = StringBuilder()
     for (i in 1..32) {
         val char = when ((1..3).random()) {
-            1 -> (48..57).random().toChar()
-            2 -> (65..90).random().toChar()
-            3 -> (97..122).random().toChar()
+            1 -> numbers.random()
+            2 -> symbolUpper.random()
+            3 -> symbolsLower.random()
             else -> ' '
         }
         token.append(char)
@@ -18,7 +22,7 @@ fun generateToken(): String {
     return token.toString()
 }
 
-fun authorizate (login: String, password: String): String? {
+fun authorize (login: String, password: String): String? {
     return if (login == VALID_USER_LOGIN && password == VALID_USER_PASSWORD) {
         generateToken()
     } else {
@@ -26,7 +30,7 @@ fun authorizate (login: String, password: String): String? {
     }
 }
 
-fun getCard(token: String?): List<String>? {
+fun getCart(token: String?): List<String>? {
     val card = listOf("Товар 1, Товар 2, Товар 3")
     return if (token != null) card else null
 }
@@ -37,10 +41,10 @@ fun main() {
     println("Введите пароль")
     val password = readln()
 
-    val token = authorizate(login, password)
+    val token = authorize(login, password)
     if (token != null) {
         println("Успешная авторизация. Ваш токен доступа: $token")
-    val card = getCard(token)
+    val card = getCart(token)
     println("Содержимое вашей корзины: ${card?.joinToString(", ")}")
     } else {
         println("Неудачная авторизация, проверье логн или пароль")
