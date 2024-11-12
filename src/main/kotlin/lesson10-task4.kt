@@ -1,7 +1,5 @@
 package org.example
 
-import kotlin.random.Random
-
 fun rollDice(): Int {
     return (1..6).random()
 }
@@ -43,7 +41,7 @@ fun main() {
         println("Хотите бросить кости еще раз? Введите Да или Нет")
         val response = readln().trim().lowercase()
 
-        playAgain = response == "да"
+        playAgain = response.equals("да", ignoreCase = true)
     }
     println("Игра окончна. Вы выиграли $playerWins партий")
 }
