@@ -1,6 +1,6 @@
 package org.example
 
-private const val s = "°C"
+const val DEGREE = "°C"
 
 class WeatherDay {
 
@@ -9,9 +9,9 @@ class WeatherDay {
     var hasPrecipitation: Boolean = false
 
     fun printWeatherInfo() {
-        val pricipitationInfo = if (hasPrecipitation) "Осадики: есть" else "Осадки: нет"
-        println("Дневная температура: $dayTemperature°C")
-        println("Ночная температура: $nightTemperature°C")
+        val pricipitationInfo = if (hasPrecipitation) "Осадки: есть" else "Осадки: нет"
+        println("Дневная температура: $dayTemperature$DEGREE")
+        println("Ночная температура: $nightTemperature$DEGREE")
         println(pricipitationInfo)
     }
 }
