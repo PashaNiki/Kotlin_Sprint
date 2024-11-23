@@ -4,18 +4,15 @@ const val DEGREE = "°C"
 const val KELVIN_TO_CELSIUS = 273
 
 class WeatherReport(
-    dayTemperatureKelvin: Int,
-    nightTemperatureKelvin: Int,
+    val dayTemperatureKelvin: Int,
+    val nightTemperatureKelvin: Int,
     val hasPrecipitation: Boolean
 ) {
 
-    val dayTempK = dayTemperatureKelvin
-    val nightTempK = nightTemperatureKelvin
-
     val dayTemperatureC: Int
-        get() = dayTempK - KELVIN_TO_CELSIUS
+        get() = dayTemperatureKelvin - KELVIN_TO_CELSIUS
     val nightTemperatureC: Int
-        get() = nightTempK - KELVIN_TO_CELSIUS
+        get() = nightTemperatureKelvin - KELVIN_TO_CELSIUS
 
     fun printWeatherInfo() {
         val precipitationInfo = if (hasPrecipitation) "Осадки: есть" else "Осадки: нет"
