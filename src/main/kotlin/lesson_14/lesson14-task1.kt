@@ -1,6 +1,6 @@
-package org.example
+package org.example.lesson_14
 
-    fun main() {
+fun main() {
         val cargoShip = CargoShip()
         val iceBreaker = IceBreaker()
         val passengerLiner = PassengerLiner()

@@ -1,4 +1,4 @@
-package org.example
+package org.example.lesson_14
 
 class PassengerLiner(
     override val name: String = "Пассажирский лайнер",
