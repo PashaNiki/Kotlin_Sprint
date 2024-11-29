@@ -1,6 +1,7 @@
 package org.example.lesson14_3
 
 fun main() {
+
     val figures = listOf(
         Circle("black", 5.0),
         Circle("white", 3.0),
