@@ -1,5 +1,24 @@
 package org.example.lesson14_3
 
+abstract class Figure (val color: String) {
+    abstract fun calculateArea(): Double
+    abstract fun calculatePerimeter(): Double
+}
+
+import kotlin.math.PI
+
+class Circle(color: String, val radiues: Double) : Figure(color) {
+    override fun calculateArea(): Double = PI * radiues * radiues
+
+    override fun calculatePerimeter(): Double = 2 * PI * radiues
+}
+
+class Rectangle(color: String, val width: Double, val height: Double) : Figure(color) {
+    override fun calculateArea(): Double = width * height
+
+    override fun calculatePerimeter(): Double = 2 * (width + height)
+}
+
 fun main() {
 
     val figures = listOf(
