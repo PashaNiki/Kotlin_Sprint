@@ -2,6 +2,9 @@ package org.example.lesson14_3
 
 import kotlin.math.PI
 
+const val COLOR_BLACK = "black"
+const val COLOR_WHITE = "white"
+
 abstract class Figure (val color: String) {
     abstract fun calculateArea(): Double
     abstract fun calculatePerimeter(): Double
@@ -29,11 +32,11 @@ fun main() {
     )
 
     val blackPerimetrsSum = figures
-        .filter { it.color == "black" }
+        .filter { it.color == COLOR_BLACK }
         .sumOf { it.calculatePerimeter() }
 
     val whiteAreasSum = figures
-        .filter { it.color == "white" }
+        .filter { it.color == COLOR_WHITE }
         .sumOf { it.calculateArea() }
 
     println("Сумма периметров всех черных фигур: %.2f".format(blackPerimetrsSum))
