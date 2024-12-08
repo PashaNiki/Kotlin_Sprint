@@ -20,12 +20,12 @@ interface CargoTransport {
     fun unloadCargo(weight: Double)
 }
 
-class Truck : Movable, CargoTransport {
+class Truck : Movable, CargoTransport, PassengerTransport {
     override val maxCargoWeight = 2.0
     override var currentCargoWeight = 0.0
 
-    val maxPassengers = 1
-    var currentPassengers = 0
+    override val maxPassengers = 1
+    override var currentPassengers = 0
 
     override fun move() {
         println("Грузовик едет с $currentCargoWeight т груза и $currentPassengers пассажиром.")
@@ -48,7 +48,27 @@ class Truck : Movable, CargoTransport {
             println("Невозможно выгрузить $weight т. Недостаточно груза")
         }
     }
-}
+
+
+    override fun loadPassenger() {
+        if (currentPassengers < maxPassengers) {
+            currentPassengers++
+            println("Посадили пассажира. Сейчас в грузовике $currentPassengers пассажира.")
+        } else {
+            println("Грузовик переполнен. Невозможно посадить пассажира.")
+        }
+    }
+
+    override fun unloadPassenger() {
+            if (currentPassengers > 0) {
+                currentPassengers--
+                println("Высадили пассажира. Сейчас в грузовике $currentPassengers пассажира.")
+            } else {
+                println("В грузовике нет пассажиров для высадки.")
+            }
+        }
+    }
+
 
 class Car : Movable, PassengerTransport {
     override val maxPassengers = 3
