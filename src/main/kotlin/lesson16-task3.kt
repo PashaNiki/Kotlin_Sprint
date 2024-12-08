@@ -2,9 +2,7 @@ package org.example
 
 class User(private val login: String, private val password: String) {
 
-    fun validatePassword(inputPassword: String): Boolean {
-        return inputPassword == password
-    }
+    fun validatePassword(inputPassword: String): Boolean = inputPassword == password
 
     fun getLogin(): String {
         return login
