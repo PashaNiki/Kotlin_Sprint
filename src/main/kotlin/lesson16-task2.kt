@@ -9,7 +9,7 @@ class Circle(private val radius: Double) {
     }
 
     fun calculateArea(): Double {
-        return PI * radius * radius
+        return PI * Math.pow(radius, 2.0)
     }
 }
 
