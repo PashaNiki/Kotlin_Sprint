@@ -1,5 +1,7 @@
 package org.example
 
+import kotlin.math.pow
+
 private const val PI = 3.14
 
 class Circle(private val radius: Double) {
@@ -9,7 +11,7 @@ class Circle(private val radius: Double) {
     }
 
     fun calculateArea(): Double {
-        return PI * Math.pow(radius, 2.0)
+        return PI * radius.pow(2.0)
     }
 }
 
