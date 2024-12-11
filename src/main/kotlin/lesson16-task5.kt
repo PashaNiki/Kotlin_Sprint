@@ -6,6 +6,7 @@ private const val INITIAL_ATTACK_POWER = 25
 class Player(val name: String, private var health: Int = INITIAL_HEALTH, private var attackPower: Int = INITIAL_ATTACK_POWER) {
 
     private fun die() {
+
         println("$name погибает")
         health = 0
         attackPower = 0
