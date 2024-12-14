@@ -1,17 +1,24 @@
 package org.example
 
-class QuizItem(
-    var question: String,
-    var answer: String
-)
-    fun main() {
-        val quizItem = QuizItem("Первый человек в космосе?", "Юрий Гагарин")
+class QuizItem(question: String, answer: String) {
+    var question: String = question
+        get() = field
 
-        println("Вопрос: ${quizItem.question}")
+    var answer: String = answer
+        get() = field
+        set(value) {
+            field = value
+        }
+}
 
-        println("Ответ: ${quizItem.answer}")
+fun main() {
+    val quizItem = QuizItem("Первый человек в космосе?", "Юрий Гагарин")
 
-        quizItem.answer = "Нил Армстронг"
+    println("Вопрос: ${quizItem.question}")
 
-        println("Новый ответ: ${quizItem.answer}")
-    }
+    println("Ответ: ${quizItem.answer}")
+
+    quizItem.answer = "Нил Армстронг"
+
+    println("Новый ответ: ${quizItem.answer}")
+}
