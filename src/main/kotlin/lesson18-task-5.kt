@@ -1,9 +1,8 @@
 package org.example
 
+const val NUM_FACES_CUBE = 6
+
 class Screen {
-    companion object {
-        const val NUM_FACES_CUBE = 6
-    }
     fun drawDot(x: Int, y: Int): String {
         return "Точка, нарисованная в координатах (Int): ($x, $y)"
     }
