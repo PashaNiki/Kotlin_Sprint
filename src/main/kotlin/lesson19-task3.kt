@@ -12,8 +12,9 @@ class Spaceship {
     fun shootAsteroid(): Nothing {
         throw NotImplementedError("Этот метод не реализован. Космический корабль пока не может стрелять астероидами")
     }
+}
 
-    fun main() {
+fun main() {
         val spaceship = Spaceship()
         spaceship.takeOff()
 
@@ -28,4 +29,3 @@ class Spaceship {
             println("Пойманное исключение: ${e.message}")
         }
     }
-}
