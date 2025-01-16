@@ -8,6 +8,7 @@ enum class FishType {
 }
 
 fun showAvialableFish() {
+
     println("Доступные рыбы для добавления в ваш аквариум:")
     for (fish in FishType.values()) {
         println("- ${fish.name.lowercase().replace('_', ' ')}")
