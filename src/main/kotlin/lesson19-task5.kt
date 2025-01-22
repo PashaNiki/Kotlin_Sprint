@@ -7,13 +7,14 @@ enum class Gender(val displayName: String) {
     FEMALE("Женский");
 }
 
-fun parseGender(input: String): Gender? {
-    return Gender.values().find { it.name.equals(input, ignoreCase = true) }
-}
-data class Person(val name: String, val gender: Gender) {
-    override fun toString(): String {
+class Person(val name: String, val gender: Gender) {
+    fun getInfo(): String {
         return "Имя: $name, Пол: ${gender.displayName}"
     }
+}
+
+fun parseGender(input: String): Gender? {
+    return Gender.values().find { it.name.equals(input, ignoreCase = true) }
 }
 
 fun main() {
@@ -26,7 +27,7 @@ fun main() {
     println("Пример ввода: Иван MALE")
 
     repeat(5) {
-        println("Введите данные человка: ")
+        println("Введите данные человека: ")
         val input = scanner.nextLine().split(" ")
 
         if (input.size == 2) {
@@ -43,8 +44,9 @@ fun main() {
             println("Ошибка: Введите данные в формате: Имя Пол")
         }
     }
+
     println("\nСписок людей в картотеке:")
     for (person in people) {
-        println(person)
+        println(person.getInfo())
     }
 }
