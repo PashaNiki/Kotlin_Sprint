@@ -7,7 +7,6 @@ fun File.prependWord(word: String) {
     val newText = word.lowercase() + "\n" + existingText
     this.writeText(newText)
 }
-
 fun main() {
     val file = File("output.txt")
 
