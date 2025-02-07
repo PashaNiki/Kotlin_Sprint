@@ -1,11 +1,12 @@
 package org.example
 
-data class MainScreenState(
-    val data: String,
-    val isLoading: Boolean = false
-)
-
 class MainScreenViewModel {
+
+    data class MainScreenState(
+        val data: String,
+        val isLoading: Boolean = false
+    )
+
     var mainScreenState = MainScreenState(data = "")
 
     fun loadData() {
