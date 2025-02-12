@@ -19,10 +19,8 @@ fun main() {
         distanceFromEarth = ALPHA_CENTAURI_DISTANCE
     )
 
-    val (name, description, eventDataTime, distance) = alphaCentauri
-
-    println("Название: $name")
-    println("Описание: $description")
-    println("Дата события: $eventDataTime")
-    println("Рассояние от Замли: $distance световых лет")
+    println("Название: ${alphaCentauri.component1()}")
+    println("Описание: ${alphaCentauri.component2()}")
+    println("Дата события: ${alphaCentauri.component3()}")
+    println("Рассояние от Замли: ${alphaCentauri.component4()} световых лет")
 }
